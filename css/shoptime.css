@@ -1,0 +1,426 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.wrap{
+    margin: 0 auto;
+    width: 1024px;
+    background: #F2F2F2;
+}
+.wrap .shop{
+    height: 70px;
+    background: black;
+    color: #FFF;
+}
+.shop h1{    
+    padding-left: 41px;
+    padding-right: 20px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    float: left;
+    font-weight: 900;    
+}
+.shop ul{
+    margin-top: 25px; 
+    margin-left: 20px;  
+    display: inline-block;
+   
+}
+.shop li{
+    display: inline;
+    font-family: HelveticaNeue-Bold;
+    font-size: 16px;
+    color: #9B9B9B;
+    margin-right: 20px;
+    font-weight: 900;     
+}
+.shop p{    
+    float: right;
+    margin-top: 25px;
+    margin-right: 41px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 900;     
+}
+
+
+
+.wrap .overview{
+    width: 940px;
+    height: 1200px;
+    margin-top: 30px;
+    margin-left: 41px;
+    
+    
+}
+.overview h2{   
+    display: inline; 
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 900;     
+}
+.overview .filter{
+    float: right;
+    margin: 0px;
+}
+.overview .filter li{
+    display: inline;
+    margin-left: 10px;
+}
+.overview .filter i{
+    margin-left: 10px;
+    font-size: 0.5px;
+}
+.overview .filter li select{
+    border: none;
+    background: no-repeat;
+}
+
+
+
+.income{    
+    background: #F2F2F2;    
+}
+.income div{
+    width: 300px;
+    height: 138px;
+    float: left;
+    background: #FFF;
+    margin-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px 5px #EBEBEB;
+    border-radius: 3px;
+}
+.income  i{    
+    margin: 25px 3px 10px 65px;
+    font-size: 26px;
+}
+.income  p{
+    font-family: HelveticaNeue-Medium;
+    font-size: 16px;
+    color: #000000;
+    display: inline;
+    font-weight: 700;
+}
+.income  .money{
+    font-family: HelveticaNeue-Bold;
+    font-size: 36px;
+    color: #7ED321; 
+    margin-left: 95px;
+    
+}
+.income .cost{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+
+.overview .website{
+    width: 460px;
+    height: 456px;
+    background: #FFF;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px 5px #EBEBEB;
+    border-radius: 3px;
+    float: left;
+    
+}
+.website h4{
+    padding-top: 30px;
+    padding-left: 30px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: 800;
+} 
+.website div{
+    margin-left: 30px;
+    margin-right: 30px;
+    border-bottom: 2px solid #EBEBEB;
+    height:  90px;
+}
+.website img{
+    width: 45.5px;
+    height: 52px;
+    margin-top: 20px;
+}
+.website p{
+    display: inline;
+}
+.website .fb{
+    font-family: HelveticaNeue-Medium;
+    font-size: 16px;
+    color: #9B9B9B;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    font-weight: 800;
+}
+.website .coin{
+    font-family: HelveticaNeue-Medium;
+    font-size: 20px;
+    color: #000000;
+    text-align: right;
+    position: relative;
+    top :15px;
+    left: 100px;
+    font-weight: 800;
+}
+.website .coin2{
+    font-family: HelveticaNeue-Medium;
+    font-size: 20px;
+    color: #000000;
+    text-align: right;
+    position: relative;
+    top :15px;
+    left: 115px;
+    font-weight: 800;
+}
+.website .coin3{
+    font-family: HelveticaNeue-Medium;
+    font-size: 20px;
+    color: #000000;
+    text-align: right;
+    position: relative;
+    top :15px;
+    left: 125px;
+    font-weight: 800;
+}
+.website .coin4{
+    font-family: HelveticaNeue-Medium;
+    font-size: 20px;
+    color: #000000;
+    text-align: right;
+    position: relative;
+    top :15px;
+    left: 105px;
+    font-weight: 800;
+}
+
+.website .ffu{
+    color: #7ED321;
+    margin-left: 20px;
+    font-size: 18px;
+    position: relative;
+    top: 15px;
+    left: 90px;     
+     
+}
+.website .ffu2{
+    color: #7ED321;
+    margin-left: 20px;
+    font-size: 18px;
+    position: relative;
+    top: 15px;
+    left: 105px;      
+}
+.website .ffd{    
+    font-size: 18px; 
+    color: #D0021B;     
+    position: relative;
+    top: 15px;
+    left: 136px;
+}
+.website .ffd2{    
+    
+    font-size: 18px; 
+    color: #D0021B; 
+    position: relative;
+    top: 15px;
+    left: 120px;
+    position: relative;
+    top: 15px;
+    left: 113px;
+}
+.website .prso{
+    color: #7ED321;
+    font-family: HelveticaNeue-Medium;
+    font-size: 16px;    
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+    top: 15px;
+    right: -100px;
+}
+.website .prso2{
+    color: #7ED321;
+    font-family: HelveticaNeue-Medium;
+    font-size: 16px;    
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+    top: 15px;
+    right: -115px;
+}
+.website .prso3{
+    color: #D0021B;
+    font-family: HelveticaNeue-Medium;
+    font-size: 16px;    
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+    top: 15px;
+    right: -146px;
+}
+.website .prso4{
+    color: #D0021B;
+    font-family: HelveticaNeue-Medium;
+    font-size: 16px;    
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+    top: 15px;
+    right: -123px;
+}
+
+
+
+.overview .latest{
+    margin: 0;
+    width: 460px;
+    height: 456px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px 5px #EBEBEB;
+    border-radius: 3px;
+    float: right;        
+}
+.latest h5{
+    padding-top: 30px;
+    padding-left: 30px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+.latest div{
+    height: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-bottom: 2px solid #EBEBEB;
+}
+.latest img{
+    margin-top: 10px;
+    margin-right:20px;
+}
+.latest ul{   
+    float: right;
+    width: 270px;
+    margin-top: 15px;
+
+}
+.latest p{
+    display: inline;
+}
+.latest .vintage{
+    font-family: HelveticaNeue-Bold;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.latest .ffc{
+    font-size: 10px;
+    opacity: 0.5;
+}
+.latest .time{
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    color: #9B9B9B;
+    opacity: 0.5;
+}
+.latest .total{
+    margin-left: 100px;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #000000;
+    
+}
+.latest .ffm{
+    font-size: 18px;
+    opacity: 0.5;
+    margin-left: 2px;
+    margin-top: 7px;
+}
+.latest .belle{
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    color: #9B9B9B;
+    opacity: 0.5;
+}
+.latest .price{
+    font-family: HelveticaNeue-Bold;
+    font-size: 20px;
+    color: #000000;
+    font-weight:800;
+    margin-left: 115px;
+}
+.latest .price2{
+    font-family: HelveticaNeue-Bold;
+    font-size: 20px;
+    color: #000000;
+    font-weight:800;
+    margin-left: 75px;
+}
+.latest .price3{
+    font-family: HelveticaNeue-Bold;
+    font-size: 20px;
+    color: #000000;
+    font-weight:800;
+    margin-left: 100px;
+}
+

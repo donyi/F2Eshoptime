@@ -1,0 +1,381 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.wrap{
+    margin: 0 auto;
+    width: 1024px;
+    background: #F2F2F2;
+}
+.wrap .shop{
+    height: 70px;
+    background: black;
+    color: #FFF;
+}
+.shop h1{    
+    padding-left: 41px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    float: left;
+    font-weight: 900;    
+}
+.shop ul{
+    margin-top: 25px; 
+    margin-left: 20px;  
+    display: inline-block;
+   
+}
+.shop li{
+    display: inline;
+    font-family: HelveticaNeue-Bold;
+    font-size: 16px;
+    color: #9B9B9B;
+    margin-right: 20px;
+    font-weight: 900;     
+}
+.shop p{    
+    float: right;
+    margin-top: 25px;
+    margin-right: 41px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 900;     
+}
+
+
+.content-box{
+    width: 940px;
+    height: 1010px;
+    margin-top: 30px;
+    margin-left: 41px;
+}
+.content-box .all-box{
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+.all-box .all {
+    display: block;
+    position: relative;    
+    margin-right: 20px;
+    margin-bottom: 7px;    
+    cursor: pointer;
+    font-size: 22px;
+    width: 20;
+    height: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #000000;    
+}
+.all input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    
+    z-index:1;
+    
+        
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;   
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+          
+}
+.all:hover input ~ .checkmark {
+    background-color: #ccc;    
+}
+
+.all input:checked ~ .checkmark {
+    background-color:black;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.all input:checked ~ .checkmark:after {
+    display: block;
+}
+.all .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.content-box select{
+    border: none;
+    background: no-repeat;
+}
+.content-box .edit-box{
+    float: right;
+}
+
+.content-box .content{
+       
+    margin-top: 20px; 
+}
+.content .item{
+    background: #FFF;
+    
+}
+.content .t1{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;      
+}
+.content .t2{
+    padding-right: 59px;
+}
+.content .t3{
+    text-align: left;
+}
+.item th{
+    font-family: HelveticaNeue-Bold;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 800;
+}
+
+
+.goods td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #000000;  
+}
+.all-box2 .all2 {
+    display: block;
+    position: relative;    
+    margin-right: 20px;
+    margin-bottom: 7px;    
+    cursor: pointer;
+    font-size: 22px;
+    width: 20px;
+    height: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #000000;
+}
+.all2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;    
+    z-index:1;        
+}
+.checkmark2 {
+    position: absolute;
+    top: 0;
+    left: 0;   
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+}
+.all2:hover input ~ .checkmark2 {
+    background-color: #ccc;    
+}
+
+.all2 input:checked ~ .checkmark2 {
+    background-color:black;
+}
+
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.all2 input:checked ~ .checkmark2:after {
+    display: block;
+}
+.all2 .checkmark2:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.all-box2{
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+.ves{
+    padding-left: 17px;
+    border-bottom: 1px solid #fff;
+}
+.quantity{
+    padding-left: 12px;
+}
+.money{
+    padding-left: 35px;
+}
+.add-time{
+    padding-left: 25px;
+}
+.out-time{
+    padding-left: 25px;
+}
+
+.goods2 td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #000000;
+    background: #ebebeb;  
+}
+
+.paid{
+    width: 77px;
+    height: 34px;
+    background: #7ED321;
+    border: 1px solid #7ED321;
+    border-radius: 4px;
+    
+}
+.paid select{
+    color: #fff
+}
+
+.shipping{
+    width: 112px;
+    height: 34px;
+    background: #F5A623;
+    border: 1px solid #F5A623;
+    border-radius: 4px;
+}
+.shipping select{
+    color: #fff
+}
+
+.done{
+    width: 85px;
+    height: 34px;
+    background: #4A90E2;
+    border: 1px solid #4A90E2;
+    border-radius: 4px;
+}
+.done select{
+    color: #fff
+}
+
+.unpaid{
+    width: 98px;
+    height: 34px;
+    background: #9B9B9B;
+    border: 1px solid #9B9B9B;
+    border-radius: 4px;
+}
+.goods3 td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #000000;
+    text-decoration:line-through;
+    opacity: 0.5;
+}
+
+.page{
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    float: right;
+    margin-top: 20px;
+}
+.page div{
+    float: left;
+    width: 41px;
+    height: 42px;
+    background: #fff;
+    line-height: 42px;
+    text-align: center;
+    margin-left: 2px;
+    font-family: HelveticaNeue;  
+}
+.box{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.box1{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+

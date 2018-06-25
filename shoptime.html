@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/shoptime.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="shop">
+            <h1>Shoptime</h1>
+            <ul>
+                <li>HOME</li>
+                <li>ORDERS</li>
+                <li>PODUCT</li>                
+            </ul>
+            <p>ADMIN</p>            
+        </div>
+
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <ul class="filter">
+                <li>2018/6/6</li>
+                <i class="fa fa-caret-right"></i>
+                <li>2018/6/13</li>
+                <li>
+                    <select name="" id="">
+                        <option value="">Daily</option>
+                        <option value="">Weekly</option>
+                        <option value="">Monthly</option>
+                        <option value="">Yearly</option>
+                        <option value="">Custom</option>
+                    </select>
+
+                </li>
+            </ul>
+
+            <div class="income">
+                <div class="revenue">
+                    <i class="fas fa-hand-holding-usd"> </i>
+                    <p>TOTAL RECENUE</p>
+                    <p class="money">54,540</p>
+                </div>
+                <div class="cost">
+                    <i class="fas fa-boxes"></i>
+                    <p>TOTAL COST</p>
+                    <p class="money">12,660</p>
+                </div>
+                <div class="net">
+                    <i class="fas fa-money-bill"></i>
+                    <p>NET INCOME</p>
+                    <p class="money">41,880</p>    
+                </div>
+            </div>
+            <div > 
+                <canvas id="myChart" width="940px" height="406px"></canvas>
+            </div>     
+            
+            <div class="website">
+                
+                    
+                <h4>Transaction Website</h4>
+                <div>
+                    <img src="https://image.freepik.com/free-icon/facebook-logo_318-49940.jpg" alt="">
+                    <P class="fb">Facebook.com</P>
+                    <P class="coin">45,836</P> 
+                    <i class="fas fa-arrow-up ffu"></i>
+                    <P class="prso">20%</P>
+                </div>
+                <div>
+                    <img src="data:image/png;base64,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" alt="">
+                    <P class="fb">Google.com</P>
+                    <P class="coin2">23,582</P> 
+                    <i class="fas fa-arrow-up ffu2"></i>
+                    <P class="prso2">12%</P>
+                </div>
+                <div>
+                    <img src="https://cdn.icon-icons.com/icons2/512/PNG/512/shopify_icon-icons.com_50754.png" alt="">
+                    <P class="fb">Shopift.com</P>
+                    <P class="coin3">2,489</P> 
+                    <i class="fas fa-arrow-down ffd"></i>
+                    <P class="prso3">15%</P>
+                </div>
+                <div>
+                    <img src="https://image.freepik.com/free-icon/wordpress-logo-of-a-letter-in-a-circle_318-49857.jpg" alt="">
+                    <P class="fb">Wordpress.com</P>
+                    <P class="coin4">1,057</P> 
+                    <i class="fas fa-arrow-down ffd2"></i>
+                    <P class="prso4">30%</P>
+                </div>
+                
+            </div>
+
+            <div class="latest">
+                <h5>Latest Orders</h5>
+                <div>
+                    <img src="img/T-shirt.jpg" alt="">
+                    <ul>
+                        <li class="vintage">
+                            <p>Vintage T-shirt</p>                            
+                        </li>
+                        <li>
+                            <i class="fas fa-clock ffc"></i>
+                            <p class="time">2018/6/13 10:45</p>
+                            <p class="total">Total</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-male ffm"></i>
+                            <p class="belle">Belle Willis</p>
+                            <p class="price">3,200</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="img/jacket.jpg" alt="">
+                    <ul>
+                        <li class="vintage">
+                            <p>Vintage T-shirt</p>                            
+                        </li>
+                        <li>
+                            <i class="fas fa-clock ffc"></i>
+                            <p class="time">2018/6/13  13:42</p>
+                            <p class="total">Total</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-male ffm"></i>
+                            <p class="belle">Adrian Cummings</p>
+                            <p class="price2">2,800</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="img/coat.jpg" alt="">
+                    <ul>
+                        <li class="vintage">
+                            <p>Cowboy Jacket</p>                            
+                        </li>
+                        <li>
+                            <i class="fas fa-clock ffc"></i>
+                            <p class="time">2018/6/13  8:26</p>
+                            <p class="total">Total</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-male ffm"></i>
+                            <p class="belle">Lura Holland</p>
+                            <p class="price3">1,600</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var ctx = document.getElementById('myChart').getContext('2d');            
+            var myLineChart = new Chart(ctx, {
+                type: 'line',                
+                labels : ["Mongodb","jquery","Laravel","bootstrap","vue.js","Html5","CSS3","php","Linux","MySQL"],
+                data: {
+                    
+                    labels:[
+                        "0","6jun","7jun","8jun","9jun","10jun","11jun","12jun","13jun",
+                    ],
+                    datasets:[{
+                        
+                        label: '',
+                        fill:false,
+                        fillColor : "rgba(220,220,220,0.5)", 
+                        strokeColor : "rgba(220,220,220,1)", 
+                        pointColor : "rgba(220,220,220,1)",                         
+                        pointBorderColor:"#FFF",                        
+                        borderColor:"#7ED321",
+                        lineTension: 0,
+                        data : [,7200,7000,5500,7200,5700,6100,7300,7100]
+                    },
+                    {
+                        label: '',
+                        fill:false,
+                        fillColor : "rgba(220,220,220,0.5)", 
+                        strokeColor : "rgba(220,220,220,1)", 
+                        pointColor : "rgba(220,220,220,1)",                        
+                        pointStrokeColor : "#fff",  
+                        borderColor:"#4A90E2",
+                        lineTension: 0,
+                        data : [,6100,5400,2000,4000,3700,5300,7500,4900]
+                        
+                    },
+                    {
+                        label: '',
+                        fill:false,
+                        fillColor : "rgba(220,220,220,0.5)",                         
+                        strokeColor : "rgba(220,220,220,1)", 
+                        pointColor : "rgba(220,220,220,1)", 
+                        pointStrokeColor : "#fff",
+                        borderColor:"#D0021B",
+                        lineTension: 0,
+                        data : [,500,500,2500,3000,2400,500,700,2000]
+                    }
+                    
+                    ],
+                    
+                    
+                },
+                
+            });
+        
+        </script>
+        
+
+        
+
+    </div>
+    
+</body>
+</html>
